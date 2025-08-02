@@ -19,10 +19,8 @@ if os.path.exists(csv_path):
     # Optional: ensure column names match
     df_new.columns = df_existing.columns
     
-    # Combine the old and new data
     df_combined = pd.concat([df_existing, df_new])
     
-    # Drop duplicates based only on the 'Date/Time' column
     df_combined = df_combined.drop_duplicates(subset=['Date/Time'])
 else:
     df_combined = df_new
