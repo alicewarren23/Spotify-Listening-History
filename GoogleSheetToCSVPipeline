@@ -5,7 +5,7 @@ from gspread_dataframe import get_as_dataframe
 import os
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("lucid-parsec-464412-t8-75d0c2e2a5fa.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("JSON", scope)
 client = gspread.authorize(creds)
 
 sheet = client.open('Recent Spotify Plays').sheet1
