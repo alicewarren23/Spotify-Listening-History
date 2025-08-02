@@ -7,7 +7,6 @@ SCOPES = ['https://www.googleapis.com/auth/drive.file']
 CLIENT_SECRET_FILE = '-'
 
 def authenticate_google():
-    # This will open a browser window to sign into your Google account
     flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRET_FILE, SCOPES)
     creds = flow.run_local_server(port=0)
     client = gspread.authorize(creds)
