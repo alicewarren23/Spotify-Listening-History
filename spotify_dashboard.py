@@ -241,7 +241,7 @@ def main():
                         df_recent.to_csv("Recent_Spotify_History.csv", index=False)
                         
                         # Combine with historical data
-                        history_df = pd.read_csv("Archived_CSV/Spotify_History2014-Aug2025.csv")
+                        history_df = pd.read_csv("Spotify_History2014-Aug2025.csv")
                         combined_df = pd.concat([history_df, df_recent], ignore_index=True)
                         combined_df = combined_df.drop_duplicates()
                         combined_df.to_csv("Spotify_History2014-Recent.csv", index=False)
